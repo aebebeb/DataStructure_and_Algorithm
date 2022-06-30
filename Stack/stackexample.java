@@ -8,7 +8,7 @@ import java.util.EmptyStackException;
 
 // stack 구현 push(), pop(), peek(), Isempty()
 // 중첩 클래스
-// 중첩 클래스를 사용하는 이유: 클래스들의 논리적인 그룹을 나타낼 때 쓴다.
+// 이 코드에서 중첩 클래스를 사용하는 이유: 클래스들의 논리적인 그룹을 나타내기 위해.
 
 class stack <T>{
 	//노드의 구성 요소 data, next

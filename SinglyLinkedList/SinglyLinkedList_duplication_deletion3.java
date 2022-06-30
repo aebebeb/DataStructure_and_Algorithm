@@ -73,9 +73,11 @@ class LinkedListStructure3 {
 					cur.next = cur.next.next;
 				}
 				// 데이터가 일치하지 않더라도 비교 당하고 있는 노드의 위치는 바뀌어야 함
-				// if - else 꼭...
-				else {					
-					cur = cur.next;
+				// 오류 발생 이유: cur이 맨 마지막 노드 - 1에 위치해 있으며 맨 마지막 노드가 현재 stan인 노드와 같은 값을 갖게 되면 cur.next는 null임
+				
+				//그렇기 때문에 if (cur.next!= null)을 중복하여 쓰기보다는 else로 문장을 처리해 준다.
+				else {
+					cur = cur.next;					
 				}
 			}
 			// stan 자리 재배치
@@ -92,12 +94,7 @@ public class SinglyLinkedList_duplication_deletion3 {
 		LinkedListStructure3 wh = new LinkedListStructure3();
 		wh.append(1);
 		wh.append(2);
-		wh.append(3);
-		wh.append(4);
 		wh.append(2);
-		wh.append(3);
-		wh.append(4);
-		wh.append(5);
 		wh.append(6);
 		wh.append(2);
 		wh.retrieve();
